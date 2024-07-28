@@ -9,7 +9,11 @@
 ### 函数记忆
 sort_values("coal consumption (g coal/KWh)")  # 按照一度电的耗煤量（近似为边际成本）降序排序
 
+
 model = LinearRegression()
+
 X = prices[:train_length]
+
 y = electricity_price["clearing price (CNY/MWh)"].iloc[:train_length].values.reshape(-1, 1)
+
 model.fit(X, y)
